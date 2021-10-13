@@ -25,6 +25,7 @@ const Filter: FC<IFilter> = ({ items }) => {
 
   return (
     <div className="filter">
+      <FilterTab title="All" count={items.length} path={Routes.PasswordHealth} />
       <FilterTab title="Weak" count={weakItemsCount} path={Routes.Weak} />
       <FilterTab title="Reused" count={reusedItemsCount} path={Routes.Reused} />
       <FilterTab title="Old" count={oldItemsCount} path={Routes.Old} />
