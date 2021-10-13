@@ -1,6 +1,11 @@
 const LoadingScreen = () => (
   <div className="loading-screen">
-    Loading...
+    <div className="loading-screen__spinner">
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
   </div>
 );
 
