@@ -8,19 +8,19 @@ interface IToken {
 let tokens: Array<IToken> = [];
 
 export const addToken = (token: string, userId: string) => {
-    tokens.push({ token, userId });
-}
+  tokens.push({ token, userId });
+};
 
 export const removeToken = (token: string) => {
-    tokens =  tokens.filter(({ token: t }) => t !== token)
-}
+  tokens = tokens.filter(({ token: t }) => t !== token);
+};
 
 export const isTokenValid = (token: string) => (
-    tokens.some(({token: t }) => t === token)
+  tokens.some(({ token: t }) => t === token)
 );
 
 export const getTokenOwner = (token: string) => (
-    tokens.find(({token: t }) => t === token)?.userId
-)
+  tokens.find(({ token: t }) => t === token)?.userId
+);
 
 export const generateToken = () => faker.random.alphaNumeric(24);
